@@ -1,109 +1,113 @@
+/** @format */
 /* Osnovne postavke */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav ul, nav li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+nav ul,
+nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* Fiksna navigacija pri vrhu */
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 /* Osnovni izgled glavne navigacije */
 nav > ul {
-    background-color: #003366; /* tamnoplava */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: sans-serif;
+  background-color: #003366; /* tamnoplava */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: sans-serif;
 }
 
 nav > ul > li {
-    position: relative;
+  position: relative;
 }
 
 nav a {
-    display: block;
-    padding: 15px 20px;
-    color: white;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #C89727;
+  background-color: #c89727;
 }
 
 /* Podmeni (drugi nivo) */
 nav ul ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #293e6b;
-    display: none;
-    min-width: 250px;
-    z-index: 1000;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #293e6b;
+  display: none;
+  min-width: 250px;
+  z-index: 1000;
 }
 
 nav ul ul li {
-    position: relative;
+  position: relative;
 }
 
 /* Prikaz podmenija na hover */
 nav ul li:hover > ul {
-    display: block;
+  display: block;
 }
 
 /* Treći nivo (npr. "Odlazna" i "Dolazna") */
 nav ul ul ul {
-    left: 100%;
-    top: 0;
+  left: 100%;
+  top: 0;
 }
 
 /* Hover efekti za podmenije */
 nav ul ul a {
-    padding: 12px 15px;
-    color: white;
-    background-color: #293e6b;
+  padding: 12px 15px;
+  color: white;
+  background-color: #293e6b;
 }
 
 nav ul ul a:hover {
-    background-color: #C89727;
+  background-color: #c89727;
 }
 
 /* Glavni sadržaj stranice */
 main {
-    max-width: 1000px;
-    margin: 120px auto 40px; /* gornji razmak zbog fiksne navigacije */
-    padding: 40px 20px;
-    line-height: 1.6;
+  max-width: 1000px;
+  margin: 120px auto 40px; /* gornji razmak zbog fiksne navigacije */
+  padding: 40px 20px;
+  line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
-    color: #003366;
-    text-align: center;
+h1,
+h2,
+h3,
+h4 {
+  color: #003366;
+  text-align: center;
 }
-
 
 table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  font-family: 'Verdana', sans-serif;
+  font-family: "Verdana", sans-serif;
   font-size: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   overflow: hidden;
 }
@@ -184,112 +188,109 @@ tbody tr:last-child td {
 }
 
 .img-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-  #table-container {
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-    overflow-x: auto;
-  }
+#table-container {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
 
+#common-courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  border-radius: 12px;
+  overflow: hidden;
+  word-break: break-word;
+  table-layout: auto; /* omogućava da kolone budu šire ako je potrebno */
+}
+
+#common-courses-table th,
+#common-courses-table td {
+  border: 1px solid #999;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+#common-courses-table th {
+  font-weight: bold;
+  text-align: center;
+}
+
+#common-courses-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#common-courses-table td {
+  background-color: #fff;
+}
+
+#common-courses-table th:first-child {
+  border-top-left-radius: 12px;
+}
+
+#common-courses-table th:last-child {
+  border-top-right-radius: 12px;
+}
+
+@media screen and (max-width: 768px) {
   #common-courses-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    border-radius: 12px;
-    overflow: hidden;
-    word-break: break-word;
-    table-layout: auto; /* omogućava da kolone budu šire ako je potrebno */
+    font-size: 13px;
   }
 
   #common-courses-table th,
   #common-courses-table td {
-    border: 1px solid #999;
-    padding: 10px 12px;
-    text-align: left;
-    vertical-align: top;
+    padding: 8px;
   }
+}
 
-  #common-courses-table th {
-   
-    font-weight: bold;
-    text-align: center;
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.grid-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.grid-section .text-content {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .grid-section {
+    grid-template-columns: 1fr;
   }
+}
+#iframe-container {
+  width: 400px;
+  height: 300px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
 
-  #common-courses-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-
-  #common-courses-table td {
-    background-color: #fff;
-  }
-
-  #common-courses-table th:first-child {
-    border-top-left-radius: 12px;
-  }
-
-  #common-courses-table th:last-child {
-    border-top-right-radius: 12px;
-  }
-
-  @media screen and (max-width: 768px) {
-    #common-courses-table {
-      font-size: 13px;
-    }
-
-    #common-courses-table th,
-    #common-courses-table td {
-      padding: 8px;
-    }
-  }
-    
-     
-
-     .grid-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            margin-bottom: 60px;
-        }
-
-        .grid-section img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .grid-section .text-content {
-            text-align: left;
-        }
-
-        @media (max-width: 768px) {
-            .grid-section {
-                grid-template-columns: 1fr;
-            }
-        }
-         #iframe-container {
-      width: 400px;
-      height: 300px;
-      border: 2px solid #333;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 8px rgba(0,0,0,0.2);
-      background-color: white;
-    }
-
-    #biografija {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    #table-container {
+#biografija {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+#table-container {
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
@@ -316,13 +317,9 @@ tbody tr:last-child td {
 }
 
 #master-courses-table th {
-  
   font-weight: bold;
   text-align: center;
 }
-
-
-
 
 #master-courses-table th:first-child {
   border-top-left-radius: 12px;
@@ -330,4 +327,53 @@ tbody tr:last-child td {
 
 #master-courses-table th:last-child {
   border-top-right-radius: 12px;
+}
+
+/* Hamburger dugme */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  font-size: 30px;
+  padding: 15px 20px;
+  color: white;
+  background-color: #003366;
+  cursor: pointer;
+}
+
+/* Responzivna navigacija */
+@media (max-width: 768px) {
+  nav > ul {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    width: 100%;
+  }
+
+  nav ul ul,
+  nav ul ul ul {
+    position: static;
+  }
+
+  nav ul li:hover > ul {
+    display: block;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label + ul {
+    display: flex;
+  }
+
+  .nav-toggle-label {
+    display: block;
+  }
+
+  nav a {
+    padding: 12px 16px;
+  }
+
+  img {
+    width: 350px;
+  }
 }
